@@ -23,6 +23,19 @@ cat("f) P(Y <= 13|Y >= 11): ")
 # P(Y <= 13|Y >= 11) = P(11 <= Y <= 13) / P(Y >= 11)
 round(sum(dbinom(11:13, n, p)) / pbinom(10, n, p, lower.tail = FALSE), 4)
 
+cat("\n4) Binomial n = 15, p = 0.8\n")
+n <- 15
+p <- 0.8
+
+cat("a) P(Y = 15): ")
+round(dbinom(15, n, p), 3)
+
+cat("b) P(Y <= 13): ")
+round(pbinom(13, n, p), 3)
+
+cat("c) P(Y >= 10): ")
+round(pbinom(9, n, p, lower.tail = FALSE), 3)
+
 cat("\n20) Exponencial lambda = 1/20, P(T > 15|T > 10): ")
 lambda <- 1 / 20
 pexp(15, lambda, lower.tail = FALSE) / pexp(10, lambda, lower.tail = FALSE)
@@ -46,5 +59,5 @@ round(pnorm(7, m, sd) - pnorm(5, m, sd), 3)
 cat("e) P(Y <= 1): ")
 round(pnorm(1, m, sd), 3)
 
-cat("f) P(0 ≤ Y ≤ 2): ")
+cat("f) P(0 <= Y <= 2): ")
 round(pnorm(2, m, sd), 3)
