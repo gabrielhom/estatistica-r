@@ -3,6 +3,7 @@ n <- 15
 p <- 0.4
 
 # lower.tail por padrão é TRUE
+
 cat("a) P(Y >= 14): ")
 round(pbinom(13, n, p, lower.tail = FALSE), 3)
 
@@ -61,3 +62,24 @@ round(pnorm(1, m, sd), 3)
 
 cat("f) P(0 <= Y <= 2): ")
 round(pnorm(2, m, sd), 3)
+
+cat("\n28) Normal(0,1)\n")
+m <- 0
+sd <- 1
+
+cat("a) P(Z > z) = 0.119: ")
+round(qnorm(1 - 0.119, m, sd), 2)
+
+cat("b) P(Z < z) = 0.8051: ")
+round(qnorm(0.8051, m, sd), 2)
+
+
+cat("\n30) Normal media = 95, desvio padrao = 7.5\n")
+m <- 95
+sd <- 7.5
+
+cat("a) P(Y > b) = 0.2611: ")
+round(qnorm(1 - 0.2611, m, sd), 2)
+
+cat("b) P(Y < b) = 0.9750: ")
+round(qnorm(0.9750, m, sd), 2)
