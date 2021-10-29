@@ -37,6 +37,18 @@ round(pbinom(13, n, p), 3)
 cat("c) P(Y >= 10): ")
 round(pbinom(9, n, p, lower.tail = FALSE), 3)
 
+cat("\n13) Poisson lambda=5/h\n")
+lambda <- 5
+
+cat("a) P(X > 2): ")
+round(ppois(2, lambda, lower.tail = FALSE), 3)
+
+cat("b) P(X = 50) lambda * 8: ")
+round(dpois(50, lambda * 8), 3)
+
+cat("c) p(X = 0) lambda * 8: ")
+dpois(0, lambda * 8)
+
 cat("\n20) Exponencial lambda = 1/20, P(T > 15|T > 10): ")
 lambda <- 1 / 20
 pexp(15, lambda, lower.tail = FALSE) / pexp(10, lambda, lower.tail = FALSE)
