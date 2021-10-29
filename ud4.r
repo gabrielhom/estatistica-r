@@ -63,6 +63,19 @@ round(pnorm(1, m, sd), 3)
 cat("f) P(0 <= Y <= 2): ")
 round(pnorm(2, m, sd), 3)
 
+cat("\n26) Binomial n = 10, p = 0.1\n")
+n <- 10
+p <- 0.1
+
+cat("b) P(Y = 3):")
+round(dbinom(3, n, p), 4)
+cat("c) P(Y <= 1): ")
+round(pbinom(1, n, p), 4)
+cat("d) E(X) e DP(X):\n")
+n * p
+round(sqrt(n * p * (1 - p)), 4)
+
+
 cat("\n28) Normal(0,1)\n")
 m <- 0
 sd <- 1
