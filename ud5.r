@@ -1,7 +1,8 @@
 p <- 0.8
 m <- p
 n <- 25
-sd <- (p * (1 - p)) / n
+var <- (p * (1 - p)) / n
+sd <- sqrt(var)
 cat("4) b)\n")
 pnorm(0.75, m, sd)
 pnorm(0.85, m, sd, lower.tail = FALSE)
