@@ -93,4 +93,4 @@ pnorm(1400, m, sd, lower.tail = FALSE) / pnorm(1200, m, sd, lower.tail = FALSE)
 
 n <- 25
 cat("c) ")
-dnorm(1200, m, sd / sqrt(n))
+pnorm(1200, m, sd / sqrt(n), lower.tail = FALSE)
